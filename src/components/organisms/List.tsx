@@ -6,9 +6,11 @@ import ListItem from "../molecules/ListItem";
 type Props = {
   data?: any[];
   isFavoritesItem?: boolean;
+  onDeleteItem?: (item: any) => void;
+  onClickItem?: (item: any) => void;
 };
 
-const List = ({ data, isFavoritesItem }: Props) => {
+const List = ({ data, isFavoritesItem, onDeleteItem, onClickItem }: Props) => {
   const [language, setLanguage] = useState<"ko" | "en">("ko");
 
   useEffect(() => {
@@ -33,13 +35,15 @@ const List = ({ data, isFavoritesItem }: Props) => {
 
   return (
     <div className="flex flex-col w-full">
-      {data?.map((item) => (
+      {data?.map((item, index) => (
         <ListItem
-          key={item.name}
-          descript={getDescription(item)}
+          key={index}
           icon={item.icon}
           name={item.name}
+          descript={getDescription(item)}
           isFavoritesItem={isFavoritesItem}
+          onDelete={onDeleteItem ? () => onDeleteItem(item) : undefined}
+          onClick={onClickItem ? () => onClickItem(item) : undefined}
         />
       ))}
     </div>
