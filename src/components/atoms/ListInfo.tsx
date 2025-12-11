@@ -6,8 +6,8 @@ type Props = {
 const ListInfo = ({ name, descript }: Props) => {
   return (
     <div className="w-[80%] flex flex-col items-start justify-start">
-      <p>{name}</p>
-      <p className="truncate w-full">{descript}</p>
+      <p className="text-base">{name}</p>
+      <p className="text-sm truncate w-full">{descript}</p>
     </div>
   );
 };

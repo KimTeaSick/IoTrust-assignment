@@ -36,7 +36,7 @@ const Main = () => {
   const { data: bannerData } = useBannerStore();
 
   // Custom Hooks
-  const { getDescription } = useLanguage();
+  const { language, toggleLanguage, getDescription } = useLanguage();
   const { favoritesList, removeFromFavorites } =
     useFavorites(initialFavoritesList);
   const { searchQuery, setSearchQuery, filterItems } = useSearch();
@@ -72,6 +72,8 @@ const Main = () => {
         value={searchQuery}
         onChange={setSearchQuery}
         placeholder={t("search_placeholder")}
+        onLanguageToggle={toggleLanguage}
+        language={language}
       />
       <Banner bannerList={bannerData} />
       <h2 className="text-lg p-4 border-b border-gray-300">

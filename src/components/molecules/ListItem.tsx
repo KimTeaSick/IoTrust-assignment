@@ -29,7 +29,7 @@ const ListItem = ({
 
   return (
     <div
-      className="flex justify-between p-3 border-b border-gray-300 w-full cursor-pointer hover:bg-gray-50 transition-colors"
+      className="flex items-center justify-between py-3 gap-3 border-b border-gray-300 w-full cursor-pointer hover:bg-gray-50 transition-colors"
       onClick={handleClick}
     >
       <ListIcon src={icon} alt="" />

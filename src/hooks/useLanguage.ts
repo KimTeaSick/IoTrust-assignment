@@ -15,6 +15,14 @@ export const useLanguage = () => {
     }
   }, []);
 
+  const toggleLanguage = () => {
+    const newLang = language === "ko" ? "en" : "ko";
+    setLanguage(newLang);
+    if (i18n && typeof i18n.changeLanguage === "function") {
+      i18n.changeLanguage(newLang);
+    }
+  };
+
   const getDescription = (item: any) => {
     if (language === "en" && item.en_description) {
       return item.en_description;
@@ -22,5 +30,5 @@ export const useLanguage = () => {
     return item.ko_description || item.en_description || "";
   };
 
-  return { language, getDescription };
+  return { language, toggleLanguage, getDescription };
 };
