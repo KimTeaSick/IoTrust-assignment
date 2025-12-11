@@ -20,21 +20,25 @@ const DeleteConfirmModal = ({
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,30%)] flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4">
-        <h2 className="text-lg font-semibold mb-4">{t("dapp_favorite_delete")}</h2>
-        <p className="text-gray-600 mb-6">
-          {t("dapp_favorite_delete_confirm")}
-        </p>
-        <p className="text-gray-800 font-medium mb-6">"{itemName}"</p>
-        <div className="flex justify-end gap-3">
+        <div className="flex flex-col gap-3 items-center">
+          <h2 className="text-lg font-semibold">
+            {t("dapp_favorite_delete_confirm_title")}
+          </h2>
+          <div className="border w-full border-dashed border-gray-200" />
+          <p className="text-gray-600 mb-6 text-center">
+            {t("dapp_favorite_delete_confirm")}
+          </p>
+        </div>
+        <div className="flex gap-3">
           <button
             onClick={onClose}
-            className="px-4 py-2 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+            className="px-4 py-2 text-gray-600 w-full rounded border border-gray-200 shadow"
           >
             {t("button_cancel")}
           </button>
           <button
             onClick={onConfirm}
-            className="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600"
+            className="px-4 py-2 text-gray-600 rounded w-full border border-gray-200 shadow"
           >
             {t("button_confirm")}
           </button>

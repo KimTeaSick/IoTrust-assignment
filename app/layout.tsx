@@ -1,4 +1,3 @@
-import "./i18n";
 import "./globals.css";
 import MSWInit from "./msw";
 import Provider from "./Provider";
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

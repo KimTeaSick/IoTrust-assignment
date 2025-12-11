@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import ListIcon from "../atoms/ListIcon";
+import Close from "@/src/assets/svg/Close";
 
 type Props = {
   isOpen: boolean;
@@ -9,9 +11,17 @@ type Props = {
   name: string;
   description: string;
   url: string;
+  src: string;
 };
 
-const BottomSheet = ({ isOpen, onClose, name, description, url }: Props) => {
+const BottomSheet = ({
+  isOpen,
+  onClose,
+  name,
+  description,
+  url,
+  src,
+}: Props) => {
   const { t } = useTranslation();
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -52,25 +62,35 @@ const BottomSheet = ({ isOpen, onClose, name, description, url }: Props) => {
       >
         <div className="p-6">
           {/* Handle bar */}
-          <div className="flex justify-center mb-4">
-            <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
+          <div className="flex justify-end mb-4">
+            <button onClick={handleClose}>
+              <Close />
+            </button>
           </div>
 
           {/* Content */}
-          <div className="mb-6">
-            <h2 className="text-xl font-bold mb-3">{name}</h2>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {description}
-            </p>
+          <div className="mb-6 flex flex-col gap-1">
+            <div className="flex items-start">
+              <ListIcon src={src} alt="" />
+              <h2 className="text-xl font-bold mb-3">{name}</h2>
+            </div>
+            <div className="flex flex-col">
+              <h2 className="text-lg font-semibold">Descript</h2>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {description}
+              </p>
+            </div>
           </div>
 
           {/* Button */}
-          <button
-            onClick={handleOpenUrl}
-            className="w-full py-3 bottom-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
-          >
-            {t("go_to_dapp")}
-          </button>
+          <div className="fixed left-0 bottom-3 w-full flex justify-center items-center">
+            <button
+              onClick={handleOpenUrl}
+              className="w-52 py-3 bg-green-600 text-white rounded-4xl transition-colors font-medium"
+            >
+              {t("go_to_dapp")}
+            </button>
+          </div>
         </div>
       </div>
     </>

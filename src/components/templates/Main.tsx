@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import List from "../organisms/List";
 import InfiniteScrollList from "../organisms/InfiniteScrollList";
 import SearchBar from "../molecules/SearchBar";
@@ -14,10 +14,17 @@ import {
 import { useTranslation } from "react-i18next";
 import Banner from "../organisms/Banner";
 import { useBannerStore } from "@/src/stores/server/banner";
+import { useLanguage } from "@/src/hooks/useLanguage";
+import { useFavorites } from "@/src/hooks/useFavorites";
+import { useSearch } from "@/src/hooks/useSearch";
+import { useDeleteModal } from "@/src/hooks/useDeleteModal";
+import { useBottomSheet } from "@/src/hooks/useBottomSheet";
+import { useDAppData } from "@/src/hooks/useDAppData";
 
 const Main = () => {
   const { t } = useTranslation();
 
+  // Stores
   const {
     data: dAppData,
     fetchNextPage,
@@ -28,105 +35,36 @@ const Main = () => {
   const { data: initialFavoritesList } = useFavoritesListStore();
   const { data: bannerData } = useBannerStore();
 
-  const [favoritesList, setFavoritesList] = useState<any[]>([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [itemToDelete, setItemToDelete] = useState<any>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isBottomSheetOpen, setIsBottomSheetOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<any>(null);
-  const [language, setLanguage] = useState<"ko" | "en">("ko");
-
-  // useInfiniteQuery에서 모든 페이지의 데이터를 평탄화
-  const dAppList = useMemo(() => {
-    if (!dAppData?.pages) return [];
-    return dAppData.pages.flatMap((page) => page.data);
-  }, [dAppData]);
-
-  // 브라우저 언어 감지 및 i18n 언어 설정
-  useEffect(() => {
-    const browserLang = navigator.language.toLowerCase();
-    const detectedLang = browserLang.startsWith("en") ? "en" : "ko";
-    setLanguage(detectedLang);
-  }, []);
-
-  // 초기 데이터 로드
-  useEffect(() => {
-    if (initialFavoritesList) {
-      setFavoritesList(initialFavoritesList);
-    }
-  }, [initialFavoritesList]);
-
-  // 검색 필터 함수
-  const filterItems = (items: any[] | undefined, query: string) => {
-    if (!items) return [];
-    if (!query.trim()) return items;
-
-    const lowerQuery = query.toLowerCase();
-
-    return items.filter((item) => {
-      const name = item.name?.toLowerCase() || "";
-      const koDescription = item.ko_description?.toLowerCase() || "";
-      const enDescription = item.en_description?.toLowerCase() || "";
-      const kor = item.kor?.toLowerCase() || "";
-      const eng = item.eng?.toLowerCase() || "";
-
-      return (
-        name.includes(lowerQuery) ||
-        koDescription.includes(lowerQuery) ||
-        enDescription.includes(lowerQuery) ||
-        kor.includes(lowerQuery) ||
-        eng.includes(lowerQuery)
-      );
-    });
-  };
+  // Custom Hooks
+  const { getDescription } = useLanguage();
+  const { favoritesList, removeFromFavorites } =
+    useFavorites(initialFavoritesList);
+  const { searchQuery, setSearchQuery, filterItems } = useSearch();
+  const {
+    isOpen: isModalOpen,
+    itemToDelete,
+    openModal,
+    closeModal,
+    confirmDelete,
+  } = useDeleteModal();
+  const {
+    isOpen: isBottomSheetOpen,
+    selectedItem,
+    openSheet,
+    closeSheet,
+  } = useBottomSheet();
+  const { dAppList } = useDAppData(dAppData);
 
   // 필터링된 리스트
   const filteredFavoritesList = useMemo(
     () => filterItems(favoritesList, searchQuery),
-    [favoritesList, searchQuery]
+    [favoritesList, searchQuery, filterItems]
   );
 
   const filteredDAppList = useMemo(
     () => filterItems(dAppList, searchQuery),
-    [dAppList, searchQuery]
+    [dAppList, searchQuery, filterItems]
   );
-
-  const handleDeleteClick = (item: any) => {
-    setItemToDelete(item);
-    setIsModalOpen(true);
-  };
-
-  const handleConfirmDelete = () => {
-    if (itemToDelete) {
-      setFavoritesList((prev) =>
-        prev.filter((item) => item.name !== itemToDelete.name)
-      );
-    }
-    setIsModalOpen(false);
-    setItemToDelete(null);
-  };
-
-  const handleCancelDelete = () => {
-    setIsModalOpen(false);
-    setItemToDelete(null);
-  };
-
-  const handleItemClick = (item: any) => {
-    setSelectedItem(item);
-    setIsBottomSheetOpen(true);
-  };
-
-  const handleCloseBottomSheet = () => {
-    setIsBottomSheetOpen(false);
-    setSelectedItem(null);
-  };
-
-  const getDescription = (item: any) => {
-    if (language === "en" && item.en_description) {
-      return item.en_description;
-    }
-    return item.ko_description || item.en_description || "";
-  };
 
   return (
     <div className="flex flex-col w-sm min-h-screen">
@@ -136,14 +74,18 @@ const Main = () => {
         placeholder={t("search_placeholder")}
       />
       <Banner bannerList={bannerData} />
-      <h2 className="text-lg font-semibold p-4">{t("dapp_favorite_title")}</h2>
+      <h2 className="text-lg p-4 border-b border-gray-300">
+        {t("dapp_favorite_title")}
+      </h2>
       <List
         data={filteredFavoritesList}
         isFavoritesItem={true}
-        onDeleteItem={handleDeleteClick}
-        onClickItem={handleItemClick}
+        onDeleteItem={openModal}
+        onClickItem={openSheet}
       />
-      <h2 className="text-lg font-semibold p-4">{t("dapp_list_title")}</h2>
+      <h2 className="text-lg p-4 border-b border-gray-300">
+        {t("dapp_list_title")}
+      </h2>
       {isDAppLoading ? (
         <div className="flex flex-col w-full">
           {Array.from({ length: 10 }).map((_, index) => (
@@ -156,21 +98,22 @@ const Main = () => {
           hasNextPage={hasNextPage}
           isFetchingNextPage={isFetchingNextPage}
           fetchNextPage={fetchNextPage}
-          onClickItem={handleItemClick}
+          onClickItem={openSheet}
         />
       )}
       <DeleteConfirmModal
         isOpen={isModalOpen}
-        onClose={handleCancelDelete}
-        onConfirm={handleConfirmDelete}
+        onClose={closeModal}
+        onConfirm={() => confirmDelete(removeFromFavorites)}
         itemName={itemToDelete?.name || ""}
       />
       <BottomSheet
         isOpen={isBottomSheetOpen}
-        onClose={handleCloseBottomSheet}
+        onClose={closeSheet}
         name={selectedItem?.name || ""}
         description={selectedItem ? getDescription(selectedItem) : ""}
         url={selectedItem?.url || ""}
+        src={selectedItem?.icon || ""}
       />
     </div>
   );

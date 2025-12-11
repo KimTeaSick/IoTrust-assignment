@@ -1,3 +1,4 @@
+import Bookmark from "@/src/assets/svg/Bookmark";
 import { useTranslation } from "react-i18next";
 
 type Props = {
@@ -10,8 +11,9 @@ const ListDeleteButton = ({ onClick }: Props) => {
   return (
     <button
       onClick={onClick}
-      className="px-3 py-1 text-sm text-red-500 hover:text-red-700 hover:bg-red-50 rounded"
+      className="px-1 py-1 text-sm text-[#999] w-12 h-12 rounded"
     >
+      <Bookmark />
       {t("dapp_favorite_delete")}
     </button>
   );
