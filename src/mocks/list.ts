@@ -1,21 +1,164 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get("/api/user", () => {
-    return HttpResponse.json({
-      id: 1,
-      name: "Chan9yu",
-      role: "Frontend Dev",
-    });
+  http.get("/api/dAppList", () => {
+    return HttpResponse.json([
+      {
+        name: "MoonPay",
+        icon: "icon_moonpay.png",
+        url: "https://buy.moonpay.com",
+        en_description:
+          "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+        etc: "영어를 사용하는 아이폰 사용자에게만 노출 됩니다.",
+      },
+      {
+        name: "FTSO Portal",
+        icon: "icon_ftso.png",
+        url: "https://ftsoportal.com/",
+        en_description:
+          "FTSO Portal is a service by D’CENT to provide fast and easy way to delegate Vote Power to the user’s favorite FTSO provider. By delegating Vote Power, users can earn passive income as reward.",
+        ko_description:
+          "FTSO Portal은 사용자가 원하는 FTSO provider에 Vote Power 쉽고 빠르게 위임할 수 있는 기능을 제공하는 디센트의 서비스입니다. 사용자는 Vote Power 위임을 통해 패시브인컴(passive income)을 보상으로 받을 수 있습니다.",
+        network: "Songbird, Flare",
+      },
+      {
+        name: "Astar Portal",
+        icon: "icon_astar.png",
+        url: "https://portal.astar.network/",
+        en_description:
+          "Astar Portal is the official Astar Network application for using everything that Astar Network offers.",
+        ko_description:
+          "아스타포탈은 Astar Network에서 제공하는 모든 것을 사용하기 위한 Astar Network의 공식 애플리케이션입니다.",
+        network: "Astar",
+        etc: "dev/stage 환경에서만 노출 됩니다.",
+      },
+      {
+        name: "1inch",
+        icon: "icon_1inch.png",
+        url: "https://app.1inch.io/",
+        en_description:
+          "1inch is a decentralized exchange (DEX) aggregator. It's designed to roll liquidity and pricing from all major DEXes into one platform, making it easy to get the best price for the desired trade.",
+        ko_description:
+          "1inch는 모든 주요 DEX 거래소의 유동성과 가격 정보를 하나의 플랫폼에서 제공합니다. 원하는 거래의 가격을 쉽게 조회하여 토큰을 교환할 수 있습니다.",
+        network: "Ethereum",
+      },
+      {
+        name: "XDSea",
+        icon: "icon_xdsea.png",
+        url: "XDSea is the world's first and largest peer-to-peer decentralized marketplace for buying and selling NFTs built on the XDC Network.",
+        ko_description:
+          "XDSea는 XDC 네트워크에 구축된 NFT를 사고 파는 세계 최초이자 최대 규모의 P2P 분산형 시장입니다.",
+        network: "XDC Network",
+      },
+      {
+        name: "Compound",
+        icon: "icon_compound.png",
+        url: "https://app.compound.finance/",
+        en_description:
+          "Compound is Ethereum's algorithmic money market protocol that allows users to earn interest or borrow assets through collateral. Anyone can supply assets to Compound's liquidity pool and earn continuous compound interest immediately.",
+        ko_description:
+          "Compound는 담보를 통해 이자를 얻거나 자산을 빌릴 수 있는 이더리움 기반의 머니 마켓 프로토콜입니다. 컴파운드의 유동성 풀에 자산을 공급하면 복리이자를 얻을 수 있습니다.",
+        network: "Ethereum,",
+      },
+      {
+        name: "PoolTogether",
+        icon: "icon_pooltogether.png",
+        url: "https://app.pooltogether.com/",
+        en_description:
+          "PoolTogether is an Ethereum based application that makes saving money as fun as a game. You join a pool by getting a “savings ticket”. Each Savings Ticket gives you a chance to win a prize, but even if you don’t win, you keep all your money!",
+        ko_description:
+          "PoolTogether는 저축을 재미있게 하는 이더리움 기반의 서비스입니다. 자산을 예치하면 “저축 티켓“을 받아 '풀'에 참여합니다. 각 저축 티켓은 풀에서 발생한 이자를 받을 수있는 기회를 제공하지만, 당첨되지 않더라도 손실이 없습니다.",
+        network: "Ethereum",
+      },
+      {
+        name: "OpenSea",
+        icon: "icon_opensea.png",
+        url: "https://opensea.io/",
+        en_description:
+          "OpenSea is a marketplace for digital goods, including collectibles, game items, digital art, and other digital assets backed by blockchain such as Ethereum.",
+        ko_description:
+          "OpenSea는 수집품, 게임 아이템, 디지털 아트와 같은 이더리움 기반의 디지털 상품 및 디지털 자산을 거래할 수 있는 마켓 플레이스입니다.",
+        network: "Ethereum, Polygon",
+      },
+      {
+        name: "BlueWhale",
+        icon: "icon_bluewhale.png",
+        url: "https://bwpm.io/",
+        ko_description:
+          "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
+        network: "Kaia",
+        etc: "한국어 사용자들에게만 노출 됩니다.",
+      },
+    ]);
   }),
 
-  http.post("/api/login", async ({ request }) => {
-    const body = await request.json();
+  http.get("/api/favoritesList", () => {
+    return HttpResponse.json([
+      {
+        name: "OpenSea, the largest NFT marketplace",
+        icon: "icon_opensea.png",
+        url: "https://opensea.io",
+      },
+      {
+        name: "MoonPay",
+        icon: "icon_moonpay.png",
+        url: "https://buy.moonpay.com/v2/buy",
+      },
+      {
+        name: "Rarible - NFT Marketplace for Brands, Communities and Traders",
+        icon: "icon_rarible.png",
+        url: " https://rarible.com/",
+      },
+    ]);
+  }),
 
-    return HttpResponse.json({
-      success: true,
-      token: "mock-token-123",
-      received: body,
-    });
+  http.get("/api/bannerList", () => {
+    return HttpResponse.json([
+      {
+        name: "Campaign MAPO Airdrop",
+        ko_image: "banner_mapo_kr.png",
+        en_image: "banner_mapo_en.png",
+        ko_link:
+          "https://store-kr.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+        en_link:
+          "https://store.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+      },
+      {
+        name: "Campaign MAPO Airdrop",
+        ko_image: "banner_mapo_kr.png",
+        en_image: "banner_mapo_en.png",
+        ko_link:
+          "https://store-kr.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+        en_link:
+          "https://store.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+      },
+      {
+        name: "D'CENT Wallet",
+        ko_image: "banner_dcent.png",
+        en_image: "banner_dcent.png",
+        ko_description:
+          "디센트 지문인증형 지갑으로 한층 더 강화된 보안을 경험하세요!",
+        en_description: "Enhance your security with D'CENT biometric wallet",
+        ko_link:
+          "https://store-kr.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+        en_link:
+          "https://store.dcentwallet.com/blogs/post/tap-that-drop-with-map-protocol",
+        ko_button_text: "구매하기",
+        en_button_text: "Buy Now",
+      },
+      {
+        name: "D'CENT Blog",
+        ko_image: "banner_blog.png",
+        en_image: "banner_blog.png",
+        ko_description:
+          "새로운 디센트 블로그를 방문하여 최신 업데이트를 먼저 확인해보세요!",
+        en_description:
+          "Visit the new D’CENT Blog to explore the latest updates first!",
+        ko_link: "https://store-kr.dcentwallet.com/blogs/post",
+        en_link: "https://store.dcentwallet.com/blogs/post",
+        ko_button_text: "확인하기",
+        en_button_text: "Explore",
+      },
+    ]);
   }),
 ];

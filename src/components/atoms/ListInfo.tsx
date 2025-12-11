@@ -1,13 +1,13 @@
 type Props = {
-  title: string;
-  url: string;
+  name: string;
+  descript: string;
 };
 
-const ListInfo = ({ title, url }: Props) => {
+const ListInfo = ({ name, descript }: Props) => {
   return (
     <div>
-      <p>title</p>
-      <p>url</p>
+      <p>{name}</p>
+      <p>{descript}</p>
     </div>
   );
 };

@@ -1,22 +1,21 @@
 "use client";
 
-import { useEffect } from "react";
 import List from "../organisms/List";
-import { getList } from "@/src/services/list";
+import {
+  useDAppListStore,
+  useFavoritesListStore,
+} from "@/src/stores/server/dApp";
 
 const Main = () => {
-  const test = async () => {
-    const result = await getList();
-    console.log("API Result:", result);
-  };
-
-  useEffect(() => {
-    test();
-  }, []);
+  const { data: dAppList } = useDAppListStore();
+  const { data: favotitesList } = useFavoritesListStore();
+  console.log("favotitesList", favotitesList);
 
   return (
-    <div className="flex w-sm h-full">
-      <List />
+    <div className="flex flex-col w-sm h-full">
+      <List data={favotitesList} isFavoritesItem={true} />
+
+      <List data={dAppList} />
     </div>
   );
 };

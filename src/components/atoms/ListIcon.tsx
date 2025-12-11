@@ -6,7 +6,14 @@ type Props = {
 };
 
 const ListIcon = ({ src, alt }: Props) => {
-  return <Image src={src} alt={alt} width={50} height={50} />;
+  return (
+    <Image
+      alt={alt}
+      width={50}
+      height={50}
+      src={`https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/${src}`}
+    />
+  );
 };
 
 export default ListIcon;

@@ -2,15 +2,19 @@ import ListDeleteButton from "../atoms/ListDeleteButton";
 import ListIcon from "../atoms/ListIcon";
 import ListInfo from "../atoms/ListInfo";
 
-const ListItem = () => {
+type Props = {
+  descript: string;
+  name: string;
+  icon: string;
+  isFavoritesItem?: boolean;
+};
+
+const ListItem = ({ descript, name, icon, isFavoritesItem }: Props) => {
   return (
     <div className="flex justify-between p-3 border-t border-b">
-      <ListIcon
-        src="https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/icon_uniswap.png"
-        alt=""
-      />
-      <ListInfo title="title" url="url" />
-      <ListDeleteButton />
+      <ListIcon src={icon} alt="" />
+      <ListInfo descript={descript} name={name} />
+      {isFavoritesItem && <ListDeleteButton />}
     </div>
   );
 };
