@@ -7,6 +7,8 @@ import SearchBar from "../molecules/SearchBar";
 import DeleteConfirmModal from "../atoms/DeleteConfirmModal";
 import BottomSheet from "../molecules/BottomSheet";
 import ListItemSkeleton from "../atoms/ListItemSkeleton";
+import EmptyState from "../atoms/EmptyState";
+import ErrorState from "../atoms/ErrorState";
 import {
   useDAppListStore,
   useFavoritesListStore,
@@ -32,9 +34,21 @@ const Main = () => {
     hasNextPage,
     isFetchingNextPage,
     isLoading: isDAppLoading,
+    isError: isDAppError,
+    error: dAppError,
+    refetch: refetchDAppList,
   } = useDAppListStore();
-  const { data: initialFavoritesList } = useFavoritesListStore();
-  const { data: bannerData } = useBannerStore();
+  const {
+    data: initialFavoritesList,
+    isError: isFavoritesError,
+    error: favoritesError,
+    refetch: refetchFavorites,
+  } = useFavoritesListStore();
+  const {
+    data: bannerData,
+    isError: isBannerError,
+    error: bannerError,
+  } = useBannerStore();
 
   // Custom Hooks
   const { platform } = usePlatform();
@@ -79,17 +93,45 @@ const Main = () => {
         onLanguageToggle={toggleLanguage}
         language={language}
       />
-      <Banner bannerList={bannerData} />
-      <h2 className="text-lg p-4 border-b border-gray-300">
+      {!isBannerError && <Banner bannerList={bannerData} />}
+
+      <h2 className="text-base py-3 border-b border-gray-300">
         {t("dapp_favorite_title")}
       </h2>
-      <List
-        data={filteredFavoritesList}
-        isFavoritesItem={true}
-        onDeleteItem={openModal}
-        onClickItem={openSheet}
-      />
-      <h2 className="text-lg p-4 border-b border-gray-300">
+      {isFavoritesError ? (
+        <ErrorState
+          message={t("error_favorites_title") || "즐겨찾기를 불러올 수 없습니다"}
+          description={
+            t("error_favorites_description") ||
+            "네트워크 연결을 확인하고 다시 시도해주세요."
+          }
+          onRetry={refetchFavorites}
+        />
+      ) : filteredFavoritesList.length === 0 ? (
+        <EmptyState
+          message={
+            searchQuery
+              ? t("empty_search_favorites") || "검색 결과가 없습니다"
+              : t("empty_favorites") || "즐겨찾기가 비어있습니다"
+          }
+          description={
+            searchQuery
+              ? t("empty_search_favorites_description") ||
+                "다른 검색어를 입력해보세요"
+              : t("empty_favorites_description") ||
+                "즐겨찾기를 추가해보세요"
+          }
+        />
+      ) : (
+        <List
+          data={filteredFavoritesList}
+          isFavoritesItem={true}
+          onDeleteItem={openModal}
+          onClickItem={openSheet}
+        />
+      )}
+
+      <h2 className="text-base py-3 border-b border-gray-300">
         {t("dapp_list_title")}
       </h2>
       {isDAppLoading ? (
@@ -98,6 +140,29 @@ const Main = () => {
             <ListItemSkeleton key={index} />
           ))}
         </div>
+      ) : isDAppError ? (
+        <ErrorState
+          message={t("error_dapp_title") || "dApp 리스트를 불러올 수 없습니다"}
+          description={
+            t("error_dapp_description") ||
+            "네트워크 연결을 확인하고 다시 시도해주세요."
+          }
+          onRetry={refetchDAppList}
+        />
+      ) : filteredDAppList.length === 0 ? (
+        <EmptyState
+          message={
+            searchQuery
+              ? t("empty_search_dapp") || "검색 결과가 없습니다"
+              : t("empty_dapp") || "dApp이 없습니다"
+          }
+          description={
+            searchQuery
+              ? t("empty_search_dapp_description") ||
+                "다른 검색어를 입력해보세요"
+              : t("empty_dapp_description") || "dApp을 추가해주세요"
+          }
+        />
       ) : (
         <InfiniteScrollList
           data={filteredDAppList}

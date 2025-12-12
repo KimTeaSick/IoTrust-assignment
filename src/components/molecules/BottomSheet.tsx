@@ -63,7 +63,7 @@ const BottomSheet = ({
         <div className="p-6">
           {/* Handle bar */}
           <div className="flex justify-end mb-4">
-            <button onClick={handleClose}>
+            <button className="cursor-pointer" onClick={handleClose}>
               <Close />
             </button>
           </div>
@@ -91,7 +91,7 @@ const BottomSheet = ({
           <div className="fixed left-0 bottom-3 w-full flex justify-center items-center">
             <button
               onClick={handleOpenUrl}
-              className="w-52 py-3 bg-green-600 text-white rounded-4xl transition-colors font-medium"
+              className="w-52 py-3 bg-green-600 text-white rounded-4xl transition-colors cursor-pointer font-medium"
             >
               {t("go_to_dapp")}
             </button>

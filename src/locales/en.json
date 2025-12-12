@@ -7,5 +7,17 @@
   "go_to_dapp": "Go",
   "button_cancel": "Cancel",
   "button_confirm": "Confirm",
-  "search_placeholder": "Search by name or url"
+  "search_placeholder": "Search by name or url",
+  "error_favorites_title": "Failed to load favorites",
+  "error_favorites_description": "Please check your network connection and try again.",
+  "error_dapp_title": "Failed to load dApp list",
+  "error_dapp_description": "Please check your network connection and try again.",
+  "empty_favorites": "No favorites yet",
+  "empty_favorites_description": "Add your frequently used dApps to favorites",
+  "empty_dapp": "No dApps available",
+  "empty_dapp_description": "No dApps match the current criteria",
+  "empty_search_favorites": "No results found",
+  "empty_search_favorites_description": "Try a different search term",
+  "empty_search_dapp": "No results found",
+  "empty_search_dapp_description": "Try a different search term"
 }

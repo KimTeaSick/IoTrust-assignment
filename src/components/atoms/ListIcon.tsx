@@ -12,10 +12,10 @@ const ListIcon = ({ src, alt }: Props) => {
         alt={alt}
         width={50}
         height={50}
-        src={`https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/${src}`}
-        loading="lazy"
         quality={75}
+        loading="lazy"
         placeholder="blur"
+        src={`https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/${src}`}
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
       />
     </div>

@@ -26,7 +26,7 @@ const SearchBar = ({
         placeholder={placeholder}
         className="w-full text-sm px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
       />
-      <button onClick={onLanguageToggle}>
+      <button className="cursor-pointer" onClick={onLanguageToggle}>
         <Global />
       </button>
     </div>
