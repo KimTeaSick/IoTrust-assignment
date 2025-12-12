@@ -7,6 +7,8 @@ mock 라이브러리 : msw
 노드페키지 관리 : npm
 사용 AI tool : Claude Code
 
+.env는 원활한 프로젝트 실행을 위해서 gitignore에서 제거했습니다.
+
 ### 프로젝트 실행 및 빌드 방법
 
 가장 베이직한 npm으로 제작을 했으면 package.json에서 dev환경 실행이 가능합니다.
