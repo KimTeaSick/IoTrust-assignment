@@ -1,9 +1,10 @@
 ### 사용 라이브러리
 
 프레임 워크 : next.js
-상태관리 : react-query
-디자인 라이브러리 : tailwind
 mock 라이브러리 : msw
+상태관리 : react-query
+다국어 라이브러리 : i18next
+디자인 라이브러리 : tailwind
 노드페키지 관리 : npm
 사용 AI tool : Claude Code
 
