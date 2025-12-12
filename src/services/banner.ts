@@ -13,7 +13,7 @@ export type BannerType = {
   en_button_text?: string;
 };
 
-export const getBanner = async (): Promise<BannerType> => {
+export const getBanner = async (): Promise<BannerType[]> => {
   const response = await get(`${ENV.API_BASE_URL}/api/bannerList`);
   return response.json();
 };

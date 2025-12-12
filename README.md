@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 사용 라이브러리
 
-## Getting Started
+프레임 워크 : next.js
+상태관리 : react-query
+디자인 라이브러리 : tailwind
+mock 라이브러리 : msw
+노드페키지 관리 : npm
+사용 AI tool : Claude Code
 
-First, run the development server:
+### 프로젝트 실행 및 빌드 방법
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+가장 베이직한 npm으로 제작을 했으면 package.json에서 dev환경 실행이 가능합니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+빌드는 build, build:dev, prod, staging으로 빌드가 가능하고 npm run start로 실행이 가능합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 구현한 주요 요소 설명
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+msw를 통한 mock데이터 페칭, 해당 데이터를 이용한 리스트 구현
 
-## Learn More
+아토믹한 패턴으로 컴포넌트의 재사용성을 최대한 증가시켰고, 관심사를 분리해 UI, 로직을 담당하는 컴스텀 hook을 제작
 
-To learn more about Next.js, take a look at the following resources:
+서비스, 스토어를 나눠서 react query는 실제 데이터를 받아오는 함수에 관여할 수 없게끔 관심사를 분리
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+i18next를 사용해서 en, ko 다국어 구현, 검색 바 옆에 글로벌 버튼(이게 원래 언어설정인지는 모르겠으나)을 통해 언어 스왑
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+navigator.userAgent를 통해서 사용자의 플랫폼을 감지하는 커스텀 훅 구현
 
-## Deploy on Vercel
+svg를 컴포넌트로 선언해서 재사용성을 증가시킴
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 제한시간 내 구현하지 못한 점, 아쉬운 점
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+미리 디센트앱을 설치해서 자연스럽게 기능을 미리 익혀놨으면 초반 시간 로스를 줄일 수 있었을 거 같은데, 거기까지 생각을 미치지 못해 아쉬웠습니다.
+
+페이지와 사진, 기능 명세만으로 작업을 하는게 처음이다 보니, 초반 파악하는데 시간을 많이 소요한거 같아서 아쉬운 점이 남습니다.
+
+### AI 사용 방법
+
+서브 에이전트를 적용 시켜 UI 레이아웃 제작 에이전트와 로직 제작 에이전트를 분리해서 전문성을 증가시키고,
+시스템 에이전트를 설정해서 아웃풋의 일관성을 지켜습니다. 또한 프롬프트를 작성할때, 모호한 단어는 제거하고, 정확한 목표를 제시하는 AI 친화적으로 작성
+ex. dev, stg, prod환경을 나누고 싶어, .env파일에서 해당 환경에 대한 설정을 하고, config에서 해당 환경에 대한 변수를 지정해서 사용하게끔 만들어줘.

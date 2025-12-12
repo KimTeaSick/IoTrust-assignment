@@ -1,9 +1,9 @@
-import { useState, useMemo } from "react";
+import { useState, useCallback } from "react";
 
 export const useSearch = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filterItems = (items: any[] | undefined, query: string) => {
+  const filterItems = useCallback((items: any[] | undefined, query: string) => {
     if (!items) return [];
     if (!query.trim()) return items;
 
@@ -24,7 +24,7 @@ export const useSearch = () => {
         eng.includes(lowerQuery)
       );
     });
-  };
+  }, []);
 
   return { searchQuery, setSearchQuery, filterItems };
 };

@@ -24,7 +24,7 @@ const BannerItem = ({ src, alt, link, buttonText, description }: Props) => {
       <BannerImage src={src} alt={alt} />
       {/* 오버레이 with description and CTA */}
       {(description || buttonText) && (
-        <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-6">
+        <div className="absolute bottom-0 left-0 right-0 p-6">
           {description && (
             <p className="text-white text-sm mb-3">{description}</p>
           )}

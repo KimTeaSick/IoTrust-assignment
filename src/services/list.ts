@@ -8,6 +8,16 @@ export type DAppItem = {
   en_description?: string;
   ko_description?: string;
   network?: string;
+  supportedPlatforms?: ("ios" | "android" | "desktop")[];
+  supportedLanguages?: ("ko" | "en")[];
+};
+
+export type DAppListResponse = {
+  data: DAppItem[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
 };
 
 export const getDAppList = async ({
@@ -16,7 +26,7 @@ export const getDAppList = async ({
 }: {
   page?: number;
   limit?: number;
-}): Promise<DAppItem[]> => {
+}): Promise<DAppListResponse> => {
   const response = await get(
     `${ENV.API_BASE_URL}/api/dAppList?page=${page}&limit=${limit}`
   );

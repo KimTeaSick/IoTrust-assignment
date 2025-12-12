@@ -18,7 +18,7 @@ const SearchBar = ({
   language = "ko",
 }: Props) => {
   return (
-    <div className="w-full p-4 bg-white border-b flex gap-2 items-center">
+    <div className="w-full p-1 bg-white flex gap-2 items-center">
       <input
         type="text"
         value={value}

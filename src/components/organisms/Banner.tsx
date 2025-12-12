@@ -54,20 +54,14 @@ const Banner = ({ bannerList }: Props) => {
     }
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
   if (!bannerList || bannerList.length === 0) return null;
-
-  const currentBanner = bannerList[currentIndex];
 
   return (
     <div className="relative w-full">
       {/* 배너 슬라이드 */}
       <div
         ref={containerRef}
-        className="relative w-full h-48 overflow-hidden bg-gray-100"
+        className="relative w-full h-44 overflow-hidden bg-gray-100"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -77,7 +71,7 @@ const Banner = ({ bannerList }: Props) => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {bannerList.map((banner, index) => (
-            <div key={index} className="w-full flex-shrink-0">
+            <div key={index} className="w-full shrink-0">
               <BannerItem
                 src={language === "en" ? banner.en_image : banner.ko_image}
                 alt={banner.name}

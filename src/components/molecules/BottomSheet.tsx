@@ -69,9 +69,11 @@ const BottomSheet = ({
           </div>
 
           {/* Content */}
-          <div className="mb-6 flex flex-col gap-1">
-            <div className="flex items-start">
-              <ListIcon src={src} alt="" />
+          <div className="mb-6 flex flex-col gap-3">
+            <div className="flex items-start gap-3">
+              <div>
+                <ListIcon src={src} alt="" />
+              </div>
               <h2 className="text-xl font-bold mb-3">{name}</h2>
             </div>
             <div className="flex flex-col">

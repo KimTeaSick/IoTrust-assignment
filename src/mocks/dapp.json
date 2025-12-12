@@ -4,6 +4,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -68,6 +70,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -75,6 +78,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -139,6 +144,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -146,6 +152,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -210,6 +218,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -217,6 +226,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -281,6 +292,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -288,6 +300,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -352,6 +366,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -359,6 +374,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -423,6 +440,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -430,6 +448,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -494,6 +514,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -501,6 +522,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -565,6 +588,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -572,6 +596,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -636,6 +662,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -643,6 +670,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -707,6 +736,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -714,6 +744,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -778,6 +810,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -785,6 +818,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -849,6 +884,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -856,6 +892,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -920,6 +958,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -927,6 +966,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -991,6 +1032,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -998,6 +1040,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1062,6 +1106,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1069,6 +1114,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1133,6 +1180,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1140,6 +1188,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1204,6 +1254,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1211,6 +1262,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1275,6 +1328,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1282,6 +1336,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1346,6 +1402,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1353,6 +1410,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1417,6 +1476,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1424,6 +1484,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1488,6 +1550,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1495,6 +1558,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1559,6 +1624,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1566,6 +1632,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1630,6 +1698,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1637,6 +1706,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1701,6 +1772,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1708,6 +1780,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1772,6 +1846,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1779,6 +1854,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1843,6 +1920,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1850,6 +1928,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {
@@ -1914,6 +1994,7 @@
     "url": "https://bwpm.io/",
     "ko_description": "블루웨일 프로토콜은 사용하기 쉬운 디파이 서비스를 지향하는 프로젝트입니다. 디파이 대시보드, DEX 어그리게이터, 자동 재예치 서비스 등 탈중앙화 금융(DeFi) 관련 서비스 제공을 통해 클레이튼 디파이 생태계 활동을 더 쉽고 효율적으로 만듭니다.",
     "network": "Kaia",
+    "supportedLanguages": ["ko"],
     "etc": "한국어 사용자들에게만 노출 됩니다."
   },
   {
@@ -1921,6 +2002,8 @@
     "icon": "icon_moonpay.png",
     "url": "https://buy.moonpay.com",
     "en_description": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "supportedPlatforms": ["ios"],
+    "supportedLanguages": ["en"],
     "etc": "영어를 사용하는 아이폰 사용자에게만 노출 됩니다."
   },
   {

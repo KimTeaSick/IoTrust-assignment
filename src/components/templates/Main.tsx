@@ -20,6 +20,7 @@ import { useSearch } from "@/src/hooks/useSearch";
 import { useDeleteModal } from "@/src/hooks/useDeleteModal";
 import { useBottomSheet } from "@/src/hooks/useBottomSheet";
 import { useDAppData } from "@/src/hooks/useDAppData";
+import { usePlatform } from "@/src/hooks/usePlatform";
 
 const Main = () => {
   const { t } = useTranslation();
@@ -36,9 +37,13 @@ const Main = () => {
   const { data: bannerData } = useBannerStore();
 
   // Custom Hooks
+  const { platform } = usePlatform();
   const { language, toggleLanguage, getDescription } = useLanguage();
-  const { favoritesList, removeFromFavorites } =
-    useFavorites(initialFavoritesList);
+  const { favoritesList, removeFromFavorites } = useFavorites(
+    initialFavoritesList,
+    platform,
+    language
+  );
   const { searchQuery, setSearchQuery, filterItems } = useSearch();
   const {
     isOpen: isModalOpen,
@@ -53,7 +58,7 @@ const Main = () => {
     openSheet,
     closeSheet,
   } = useBottomSheet();
-  const { dAppList } = useDAppData(dAppData);
+  const { dAppList } = useDAppData(dAppData, platform, language);
 
   // 필터링된 리스트
   const filteredFavoritesList = useMemo(
