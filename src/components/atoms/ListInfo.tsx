@@ -1,10 +1,11 @@
 type Props = {
   name: string;
   descript: string;
+  url: string;
   isFavoritesItem?: boolean;
 };
 
-const ListInfo = ({ name, descript, isFavoritesItem }: Props) => {
+const ListInfo = ({ name, descript, url, isFavoritesItem }: Props) => {
   return (
     <div
       className={[
@@ -13,7 +14,9 @@ const ListInfo = ({ name, descript, isFavoritesItem }: Props) => {
       ].join(" ")}
     >
       <p className="text-base truncate w-full">{name}</p>
-      <p className="text-sm truncate w-full">{descript}</p>
+      <p className="text-sm truncate w-full">
+        {isFavoritesItem ? url : descript}
+      </p>
     </div>
   );
 };

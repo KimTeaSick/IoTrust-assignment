@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import BannerItem from "../molecules/BannerItem";
 import type { BannerType } from "@/src/services/banner";
+import { useBannerCarousel } from "@/src/hooks/useBannerCarousel";
 
 type Props = {
   bannerList?: BannerType[];
@@ -11,48 +12,14 @@ type Props = {
 
 const Banner = ({ bannerList }: Props) => {
   const { i18n } = useTranslation();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
   const language = i18n.language as "ko" | "en";
 
-  // 자동 슬라이드 (5초마다)
-  useEffect(() => {
-    if (!bannerList || bannerList.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % bannerList.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [bannerList]);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!bannerList) return;
-
-    const minSwipeDistance = 50;
-    const distance = touchStart - touchEnd;
-
-    if (distance > minSwipeDistance) {
-      // 왼쪽으로 스와이프 (다음)
-      setCurrentIndex((prev) => (prev + 1) % bannerList.length);
-    } else if (distance < -minSwipeDistance) {
-      // 오른쪽으로 스와이프 (이전)
-      setCurrentIndex((prev) =>
-        prev === 0 ? bannerList.length - 1 : prev - 1
-      );
-    }
-  };
+  const { currentIndex, handleTouchStart, handleTouchMove, handleTouchEnd } =
+    useBannerCarousel({
+      itemCount: bannerList?.length || 0,
+      autoSlideInterval: 5000,
+    });
 
   if (!bannerList || bannerList.length === 0) return null;
 

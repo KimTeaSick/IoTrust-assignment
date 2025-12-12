@@ -4,15 +4,9 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
-  itemName: string;
 };
 
-const DeleteConfirmModal = ({
-  isOpen,
-  onClose,
-  onConfirm,
-  itemName,
-}: Props) => {
+const DeleteConfirmModal = ({ isOpen, onClose, onConfirm }: Props) => {
   const { t } = useTranslation();
 
   if (!isOpen) return null;

@@ -1,10 +1,12 @@
 import { getDAppList, getFavoritesList } from "@/src/services/list";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/src/lib/queryKeys";
 
 export const useDAppListStore = () => {
   const query = useInfiniteQuery({
-    queryKey: ["dAppList"],
-    queryFn: async ({ pageParam = 1 }) => await getDAppList({ page: pageParam, limit: 10 }),
+    queryKey: queryKeys.dApps.lists(),
+    queryFn: async ({ pageParam = 1 }) =>
+      await getDAppList({ page: pageParam, limit: 10 }),
     getNextPageParam: (lastPage) => {
       return lastPage.hasMore ? lastPage.page + 1 : undefined;
     },
@@ -15,7 +17,7 @@ export const useDAppListStore = () => {
 
 export const useFavoritesListStore = () => {
   const query = useQuery({
-    queryKey: ["favoritesList"],
+    queryKey: queryKeys.favorites.list(),
     queryFn: async () => await getFavoritesList(),
   });
   return query;

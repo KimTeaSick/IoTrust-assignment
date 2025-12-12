@@ -72,6 +72,7 @@ const InfiniteScrollList = ({
       {allItems.map((item, index) => (
         <ListItem
           key={index}
+          url={item.url}
           icon={item.icon}
           name={item.name}
           descript={getDescription(item)}

@@ -6,6 +6,7 @@ type Props = {
   descript: string;
   name: string;
   icon: string;
+  url: string;
   isFavoritesItem?: boolean;
   onDelete?: () => void;
   onClick?: () => void;
@@ -15,6 +16,7 @@ const ListItem = ({
   descript,
   name,
   icon,
+  url,
   isFavoritesItem,
   onDelete,
   onClick,
@@ -36,6 +38,7 @@ const ListItem = ({
       <ListInfo
         descript={descript}
         name={name}
+        url={url}
         isFavoritesItem={isFavoritesItem}
       />
       {isFavoritesItem && onDelete && <ListDeleteButton onClick={onDelete} />}

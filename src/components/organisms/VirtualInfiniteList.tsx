@@ -108,6 +108,7 @@ const VirtualInfiniteList = ({
                 ) : null
               ) : (
                 <ListItem
+                  url={item.url}
                   icon={item.icon}
                   name={item.name}
                   descript={getDescription(item)}

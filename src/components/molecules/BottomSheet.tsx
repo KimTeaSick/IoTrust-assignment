@@ -70,11 +70,14 @@ const BottomSheet = ({
 
           {/* Content */}
           <div className="mb-6 flex flex-col gap-3">
-            <div className="flex items-start gap-3">
-              <div>
-                <ListIcon src={src} alt="" />
+            <div className="flex flex-col gap-2">
+              <div className="flex items-start gap-3">
+                <div>
+                  <ListIcon src={src} alt="" />
+                </div>
+                <h2 className="text-xl font-bold mb-3">{name}</h2>
               </div>
-              <h2 className="text-xl font-bold mb-3">{name}</h2>
+              <p className="text-gray-600 text-sm">{url}</p>
             </div>
             <div className="flex flex-col">
               <h2 className="text-lg font-semibold">Descript</h2>

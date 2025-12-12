@@ -47,7 +47,6 @@ const Main = () => {
   const { searchQuery, setSearchQuery, filterItems } = useSearch();
   const {
     isOpen: isModalOpen,
-    itemToDelete,
     openModal,
     closeModal,
     confirmDelete,
@@ -112,7 +111,6 @@ const Main = () => {
         isOpen={isModalOpen}
         onClose={closeModal}
         onConfirm={() => confirmDelete(removeFromFavorites)}
-        itemName={itemToDelete?.name || ""}
       />
       <BottomSheet
         isOpen={isBottomSheetOpen}

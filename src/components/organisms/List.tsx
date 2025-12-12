@@ -39,6 +39,7 @@ const List = ({ data, isFavoritesItem, onDeleteItem, onClickItem }: Props) => {
       {data?.map((item, index) => (
         <ListItem
           key={index}
+          url={item.url}
           icon={item.icon}
           name={item.name}
           descript={getDescription(item)}
