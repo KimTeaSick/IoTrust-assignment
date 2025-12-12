@@ -1,12 +1,18 @@
 type Props = {
   name: string;
   descript: string;
+  isFavoritesItem?: boolean;
 };
 
-const ListInfo = ({ name, descript }: Props) => {
+const ListInfo = ({ name, descript, isFavoritesItem }: Props) => {
   return (
-    <div className="w-[80%] flex flex-col items-start justify-start">
-      <p className="text-base">{name}</p>
+    <div
+      className={[
+        "flex flex-col items-start justify-start",
+        isFavoritesItem ? "w-[60%]" : "w-[80%]",
+      ].join(" ")}
+    >
+      <p className="text-base truncate w-full">{name}</p>
       <p className="text-sm truncate w-full">{descript}</p>
     </div>
   );

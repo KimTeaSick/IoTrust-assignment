@@ -7,7 +7,7 @@ type Props = {
 
 const ListIcon = ({ src, alt }: Props) => {
   return (
-    <div className="p-1 flex border border-gray-200 shadow rounded-2xl">
+    <div className="p-1 w-14 flex border border-gray-200 shadow rounded-2xl">
       <Image
         alt={alt}
         width={50}

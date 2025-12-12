@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import ListItem from "../molecules/ListItem";
+import type { DAppItem } from "@/src/services/list";
 
 type Props = {
-  data?: any[];
+  data?: DAppItem[];
   isFavoritesItem?: boolean;
-  onDeleteItem?: (item: any) => void;
-  onClickItem?: (item: any) => void;
+  onDeleteItem?: (item: DAppItem) => void;
+  onClickItem?: (item: DAppItem) => void;
 };
 
 const List = ({ data, isFavoritesItem, onDeleteItem, onClickItem }: Props) => {

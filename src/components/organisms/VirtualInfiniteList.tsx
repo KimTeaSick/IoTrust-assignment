@@ -4,12 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import ListItem from "../molecules/ListItem";
 import ListItemSkeleton from "../atoms/ListItemSkeleton";
+import type { DAppItem } from "@/src/services/list";
 
 type Props = {
-  data?: any[];
+  data?: DAppItem[];
   isFavoritesItem?: boolean;
-  onDeleteItem?: (item: any) => void;
-  onClickItem?: (item: any) => void;
+  onDeleteItem?: (item: DAppItem) => void;
+  onClickItem?: (item: DAppItem) => void;
   hasNextPage?: boolean;
   isFetchingNextPage?: boolean;
   fetchNextPage?: () => void;

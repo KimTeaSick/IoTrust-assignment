@@ -29,11 +29,15 @@ const ListItem = ({
 
   return (
     <div
-      className="flex items-center justify-between py-3 gap-3 border-b border-gray-300 w-full cursor-pointer hover:bg-gray-50 transition-colors"
+      className="flex items-center w-sm py-3 gap-3 border-b border-gray-300 overflow-hidden cursor-pointer hover:bg-gray-50 transition-colors"
       onClick={handleClick}
     >
       <ListIcon src={icon} alt="" />
-      <ListInfo descript={descript} name={name} />
+      <ListInfo
+        descript={descript}
+        name={name}
+        isFavoritesItem={isFavoritesItem}
+      />
       {isFavoritesItem && onDelete && <ListDeleteButton onClick={onDelete} />}
     </div>
   );

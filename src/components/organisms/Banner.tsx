@@ -3,9 +3,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import BannerItem from "../molecules/BannerItem";
+import type { BannerType } from "@/src/services/banner";
 
 type Props = {
-  bannerList?: any[];
+  bannerList?: BannerType[];
 };
 
 const Banner = ({ bannerList }: Props) => {
